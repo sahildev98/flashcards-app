@@ -1,6 +1,7 @@
 import './App.css'
+import React, { useState } from 'react'
 function App() {
-
+const [cards, setCards] = useState(sample_Flashcards); 
   return (
     <>
       <h1>Hello world</h1>
