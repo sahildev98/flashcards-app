@@ -1,10 +1,10 @@
 import React from 'react'
 import Flashcard from './flashcard'
 
-const FlashcardList = ({ Flashcards }) =>
+const FlashcardList = ({ flashcards }) =>
   <section>
-    {Flashcards.map(flashcard => {
-      return <Flashcard flashcard={flashcard} key={Flashcard.id} />
+    {flashcards.map(flashcard => {
+      return <Flashcard flashcard={flashcard} key={flashcard.id} />
     })}
   </section>
 
