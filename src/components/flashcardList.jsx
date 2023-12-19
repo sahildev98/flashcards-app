@@ -1,11 +1,11 @@
 import React from 'react'
+import Flashcard from './flashcard'
 
+const FlashcardList = ({ Flashcards }) =>
+  <section>
+    {Flashcards.map(flashcard => {
+      return <Flashcard flashcard={flashcard} key={Flashcard.id} />
+    })}
+  </section>
 
-function flashcardList() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-export default FlashcardList
+export default FlashcardList;
