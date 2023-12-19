@@ -1,11 +1,9 @@
 import React from 'react'
 
- function flashcard(){
+const Flashcard = ({ flashcard }) => {
   return (
-    <div>
-    
-    </div>
+    flashcard.question
   )
 }
 
-export default Flashcard
+export default Flashcard;
