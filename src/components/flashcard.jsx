@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+function Flashcard({ question, answer }) {
+  // state func added to show or hide question/answer
+  const [showAnswer, setShowAnswer] = useState(false);
+  // event handler to toggle between question and answer
+  const flipToggle = () => {
+    setShowAnswer(!showAnswer);
+  }
 
-const Flashcard = ({ flashcard }) => {
   return (
-    flashcard.question
+    <section onClick={flipToggle}>
+      {showAnswer ? answer : question}
+    </section >
   )
 }
 
