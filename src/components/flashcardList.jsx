@@ -3,8 +3,8 @@ import Flashcard from './flashcard'
 
 const FlashcardList = ({ flashcards }) =>
   <section>
-    {flashcards.map(flashcard => {
-      return <Flashcard flashcard={flashcard} key={flashcard.id} />
+    {flashcards.map(Flashcard, id => {
+      return <Flashcard {...flashcard} key={id} />
     })}
   </section>
 
