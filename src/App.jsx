@@ -2,10 +2,10 @@ import './App.css'
 import React, { useState } from 'react'
 import FlashcardList from './components/flashcardList'
 function App() {
-const [cards, setCards] = useState(sample_Flashcards); 
+  // const [cards, setCards] = useState(sample_Flashcards);
   return (
     <>
-   <FlashcardList flashcards = {cards}/>
+      <FlashcardList flashcards={sample_Flashcards} />
     </>
   );
 }
@@ -14,17 +14,17 @@ const [cards, setCards] = useState(sample_Flashcards);
 const sample_Flashcards = [
   {
     id: 1,
-    question: 'What is 4 + 4 ?', 
-    answer: '4', 
+    question: 'What is 4 + 4 ?',
+    answer: '4',
     options: [2, 3, 5, 4]
   },
 
   {
-    id: 2, 
-    question: 'What is 5 + 5', 
-    answer: '10', 
+    id: 2,
+    question: 'What is 5 + 5',
+    answer: '10',
     options: [6, 7, 8, 9, 10]
   }
-]
+];
 
 export default App
