@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import FlashcardList from './components/flashcardList'
 import Navbar from './components/Navbar';
 function App() {
-  // const [cards, setCards] = useState(sample_Flashcards);
+  const [flashcards, setFlashcards] = useState([]);
   return (
     <>
-      <Navbar />
-      <FlashcardList flashcards={sample_Flashcards} />
+      <Navbar flashcards={flashcards} setFlashcards={setFlashcards} />
+      <FlashcardList flashcards={flashcards} />
     </>
   );
 }
