@@ -2,11 +2,22 @@ import './App.css'
 import React, { useState } from 'react'
 import FlashcardList from './components/flashcardList'
 import Navbar from './components/Navbar';
+import FlashcardForm from './components/flashcardForm';
 function App() {
   const [flashcards, setFlashcards] = useState([]);
+  const [formVisible, setFormVisible] = useState(false);
+  const newCard = () => {
+    setFormVisible(true);
+  }
+
+  const deleteCard = () => {
+    setFormVisible(false);
+  }
+
   return (
     <>
-      <Navbar flashcards={flashcards} setFlashcards={setFlashcards} />
+      <Navbar newCard={newCard} deleteCard={deleteCard} />
+      {formVisible && <FlashcardForm />}
       <FlashcardList flashcards={flashcards} />
     </>
   );
