@@ -1,14 +1,13 @@
 import { useState } from "react";
 import FlashcardForm from "./flashcardForm";
-const Navbar = ({ newCard, deleteCard }) => {
+const Navbar = ({ setFormVisible }) => {
     return (
         <nav>
             <h1 className='title'>Flashyourcard</h1>
             <ul className='nav-links'>
-                <li><button onClick={newCard}>Add Flashcard</button></li>
-                <li><button onClick={deleteCard}>Delete Flashcard</button></li>
+                <li><button onClick={() => setFormVisible(true)}>Add Flashcard</button></li>
             </ul>
-        </nav>
+        </nav >
     );
 };
 
